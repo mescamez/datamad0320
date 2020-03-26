@@ -1,4 +1,4 @@
-
+"""
 #Example: 
 
 eggs = (1,3,8,3,2)
@@ -9,10 +9,11 @@ print(my_listComprehension)
 
 
 #Insert here the module/library import statements 
-
+"""
 import math
-import random   
-
+import random 
+import os  
+"""
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
 
@@ -46,7 +47,7 @@ print(odds)
 # Remember to use list comprehensions and to print your results
 divisible_by_seven=[i for i in range(1, 1001) if i%7==0]
 print(divisible_by_seven)
-
+"""
 #7. Remove all of the vowels in a string. Hint: make a list of the non-vowels. Use non_vowels as the name of the list.
 # Remember to use list comprehensions and to print your results
 # You can use the following test string but feel free to modify at your convenience
@@ -60,20 +61,27 @@ print(non_vowels)
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
 
+sent='The Quick Brown Fox Jumped Over The Lazy Dog'
 
+capital_letters=[e.isupper() for e in sent]
+print(capital_letters)
 
 #9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 
+total_vowels=['A','E','I','O','U','a','e','i','o','u']
+
+consonants=[e for e in sent if e not in total_vowels]
+print(consonants)
 
 
 #10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
+os.getcwd()
 
-
-
+"""
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
@@ -95,15 +103,17 @@ print(flaten_lists)
 list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', '20'], \
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
-
-
-
+floats=[float(e) for e in list_of_lists for e in e]
+print(floats)
 
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
-
 for i in ['a','b','c']:
-    print i**2
+    try:
+        print (i**2)
+    except Exception as error:
+        print(type(error))
+        break
 
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
@@ -112,31 +122,43 @@ for i in ['a','b','c']:
 
 x = 5
 y = 0
-
-z = x/y
-
-
-
+try:
+    z = x/y
+except Exception as error:
+    print(type(error))
+    print('All Done')
 
 #16. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
-abc=[10,20,20]
-print(abc[3])
+try:
+    abc=[10,20,20]
+    print(abc[3])
+except Exception as error:
+    print('List index out of range')
 
 
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
 # Check in provided resources the type of error you may use. 
 
+while True:
+    try:
+        number1=int(input("Por favor introduzca un número entero: "))
+        number2=int(input("Por favor introduzca otro número entero: "))
+        print(number1/number2)
+        break
+    except ValueError:
+        print("Oops!  That was no valid number.  Try again...")
 
 
 
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
-f = open('testfile','r')
-f.write('Test write this')
+try:
+    f = open('testfile','r')
+    f.write('Test write this')
 
 
 
@@ -185,4 +207,4 @@ def linux_interaction():
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: "))
 
-
+"""
