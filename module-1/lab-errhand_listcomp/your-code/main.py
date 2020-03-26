@@ -1,4 +1,4 @@
-"""
+
 #Example: 
 
 eggs = (1,3,8,3,2)
@@ -9,11 +9,11 @@ print(my_listComprehension)
 
 
 #Insert here the module/library import statements 
-"""
+
 import math
 import random 
 import os  
-"""
+
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
 
@@ -47,7 +47,7 @@ print(odds)
 # Remember to use list comprehensions and to print your results
 divisible_by_seven=[i for i in range(1, 1001) if i%7==0]
 print(divisible_by_seven)
-"""
+
 #7. Remove all of the vowels in a string. Hint: make a list of the non-vowels. Use non_vowels as the name of the list.
 # Remember to use list comprehensions and to print your results
 # You can use the following test string but feel free to modify at your convenience
@@ -81,7 +81,7 @@ print(consonants)
 # Remember to use list comprehensions and to print your results.
 os.getcwd()
 
-"""
+
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
@@ -207,4 +207,3 @@ def linux_interaction():
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: "))
 
-"""
