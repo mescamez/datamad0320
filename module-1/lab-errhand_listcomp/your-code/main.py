@@ -79,7 +79,12 @@ print(consonants)
 #10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
-os.getcwd()
+files = list()
+for root, dirs, files in os.walk("/Users/manuelescamezsanchez/datamad0320", topdown=False):
+    for name in dirs:
+        files.append(os.path.join(root, name))
+
+print (files)
 
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
@@ -206,4 +211,5 @@ def linux_interaction():
 
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: "))
+
 
