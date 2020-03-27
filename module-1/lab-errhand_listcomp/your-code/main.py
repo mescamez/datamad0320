@@ -86,6 +86,9 @@ for root, dirs, files in os.walk("/Users/manuelescamezsanchez/datamad0320", topd
 
 print (files)
 
+## Esto ha sido lo maximo que he conseguido aproximarme en este ejercicio, se que debería hacerlo como list comprehesion.
+## Además creo que el resultado no muestra exactamente lo que pide, pero no he conseguido avanzar más.
+
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
