@@ -3,7 +3,8 @@
 
 
 class Soldier:
-    pass
+
+    return
 
 # Viking
 
