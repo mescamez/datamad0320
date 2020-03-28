@@ -40,10 +40,21 @@ class Saxon(Soldier):
 # War
 
 class War:
-    def __init__(self, vikingArmy, saxonArmy):
-        self.vikingArmy = vikingArmy
-        self.saxonArmy = saxonArmy
-    def addViking(self, n=1):
-        self.vikingArmy+=n
-    def addSaxon(self, n=1):
-        self.saxonArmy+=n
+    def __init__(self):
+        self.vikingArmy = []
+        self.saxonArmy = []
+    def addViking(self, Viking=1):
+        self.vikingArmy.append(Viking)
+    def addSaxon(self, Saxon=1):
+        self.saxonArmy.append(Saxon)
+    def vikingAttack(self):
+        Viking.attack = Saxon.receiveDamage
+        if self.health<0:
+            self.saxonArmy-=1     
+            return f" {receiveDamage} of a Saxon with the {strength} of a Viking"
+    def saxonAttack(self):
+        Saxon.attack = Viking.receiveDamage
+        if Viking[health]<0:
+            self.vikingArmy-=1     
+            return f" {receiveDamage} of a Viking with the {strength} of a Saxon"
+
