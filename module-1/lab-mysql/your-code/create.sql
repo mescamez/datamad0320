@@ -23,10 +23,10 @@ USE `lab_mysql` ;
 CREATE TABLE IF NOT EXISTS `lab_mysql`.`Cars` (
   `idCars` INT NOT NULL AUTO_INCREMENT,
   `VIN` VARCHAR(45) NOT NULL,
-  `Manufacturer` VARCHAR(45) NULL DEFAULT NULL,
-  `Model` VARCHAR(45) NULL DEFAULT NULL,
-  `Year` YEAR NULL DEFAULT NULL,
-  `Color` VARCHAR(45) NULL DEFAULT NULL,
+  `Manufacturer` VARCHAR(45) NOT NULL,
+  `Model` VARCHAR(45) NOT NULL,
+  `Year` YEAR NOT NULL,
+  `Color` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idCars`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -41,11 +41,11 @@ CREATE TABLE IF NOT EXISTS `lab_mysql`.`Customers` (
   `CustomersID` INT NOT NULL,
   `Phone_Number` INT NOT NULL,
   `Email` VARCHAR(45) NOT NULL,
-  `Addres` VARCHAR(45) NULL DEFAULT NULL,
-  `City` VARCHAR(45) NULL DEFAULT NULL,
-  `Province` VARCHAR(45) NULL DEFAULT NULL,
-  `Country` VARCHAR(45) NULL DEFAULT NULL,
-  `Postal_code` INT NULL DEFAULT NULL,
+  `Addres` VARCHAR(45) NOT NULL,
+  `City` VARCHAR(45) NOT NULL,
+  `Province` VARCHAR(45) NOT NULL,
+  `Country` VARCHAR(45) NOT NULL,
+  `Postal_code` INT NOT NULL,
   PRIMARY KEY (`idCustomers`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -58,10 +58,10 @@ COLLATE = utf8mb4_0900_ai_ci;
 CREATE TABLE IF NOT EXISTS `lab_mysql`.`Invoices` (
   `idInvoices` INT NOT NULL AUTO_INCREMENT,
   `Invoice_number` INT NOT NULL,
-  `Date` DATE NULL DEFAULT NULL,
-  `Car` VARCHAR(45) NULL DEFAULT NULL,
-  `Customer` VARCHAR(45) NULL DEFAULT NULL,
-  `Salesperson` VARCHAR(45) NULL DEFAULT NULL,
+  `Date` DATE NOT NULL,
+  `Car` VARCHAR(45) NOT NULL,
+  `Customer` VARCHAR(45) NOT NULL,
+  `Salesperson` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idInvoices`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -74,8 +74,8 @@ COLLATE = utf8mb4_0900_ai_ci;
 CREATE TABLE IF NOT EXISTS `lab_mysql`.`Salespersons` (
   `idSalespersons` INT NOT NULL AUTO_INCREMENT,
   `IDStaff` INT NOT NULL,
-  `Name` VARCHAR(45) NULL DEFAULT NULL,
-  `Store` VARCHAR(45) NULL DEFAULT NULL,
+  `Name` VARCHAR(45) NOT NULL,
+  `Store` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idSalespersons`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
